@@ -1,9 +1,20 @@
 package Sprint1.Pepparkaksdemo;
 
-public class Pepparkaka {
+public class Pepparkaka extends Godsak {
 
     private String form = "gris";
-    private boolean gräddad;
+    protected boolean gräddad;
+
+    public String demoString = "pepparkaka";
+
+    public String whoAmI(){
+        return "pepparkaka";
+    }
+
+    @Override
+    public int getSugarContent() {
+        return 50;
+    }
 
     public Pepparkaka(String fr, boolean gr){
         form=fr;

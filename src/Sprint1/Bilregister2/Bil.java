@@ -1,4 +1,4 @@
-package Sprint1.Bilregister;
+package Sprint1.Bilregister2;
 
 import Sprint1.Pepparkaksdemo.Pepparkaka;
 

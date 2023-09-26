@@ -2,17 +2,33 @@ package Sprint1.Pepparkaksdemo;
 
 public class Main {
 
+    Pepparkaka p1=new Pepparkaka();
+    Pepparkaka p2=new Pepparkaka("gubbe", true);
+    Pepparkaka p3=new Pepparkaka("gumma");
+
+  //  Godsak g = new Godsak();   //fel pga Godsak abstract
+
+    Godsak gPepparkaka = new Pepparkaka();
+    Godsak gChips = new Chips();
+    //Pepparkaka p5 = new Godsak();   //nej nej nej
+
 
     public static void main(String[] args) {
+        Main m = new Main();
+       // System.out.println(m.p1.getForm());
+       // System.out.println(m.p2.getForm());
+       // System.out.println(m.p3.getForm());
 
-        Pepparkaka p1=new Pepparkaka();
+      //  System.out.println(m.p1.demoString);
+      //  System.out.println(m.g.demoString);
+      //  System.out.println(m.gPepparkaka.demoString);
 
-        Pepparkaka p2=new Pepparkaka("gubbe", true);
+        System.out.println(m.gPepparkaka.whoAmI());
+        System.out.println(m.gChips.whoAmI());
+        //System.out.println(m.g.whoAmI());
 
-        Pepparkaka p3=new Pepparkaka("gumma");
+        System.out.println(m.gPepparkaka.getSugarContent());
+        System.out.println(m.gChips.getSugarContent());
 
-        System.out.println(p1.getForm());
-        System.out.println(p2.getForm());
-        System.out.println(p3.getForm());
     }
 }
