@@ -1,6 +1,6 @@
 package Sprint1.BilregisterDistansDemo;
 
-abstract public class Person {
+abstract public class Person implements TasteOfCars {
 
     private String name;
     private String ssn;
@@ -45,4 +45,12 @@ abstract public class Person {
     public void whoAmI(){
         System.out.println("Person");
     }
+
+    /*
+    @Override
+    public String gillarStoraBilar(){
+        return "fr personfunktionen";
+    }
+
+     */
 }

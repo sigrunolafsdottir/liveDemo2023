@@ -14,4 +14,9 @@ public class Bilägare extends Person {
     public void whoAmI(){
         System.out.println("Bilägare");
     }
+
+    @Override
+    public String gillarStoraBilar(){
+        return "fr bilägare";
+    }
 }

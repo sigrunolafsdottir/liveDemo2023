@@ -21,6 +21,20 @@ public class Huvudprogram {
         Bilägare bengt = new Bilägare();
 
         bengt.whoAmI();
+
+        Person p = new Bilägare();
+        Person p2 = new Körkortskontrollant();
+        Person p3 = new Lastbilschaufför();
+        p.whoAmI();
+        p2.whoAmI();
+        p3.whoAmI();
+
+        System.out.println(p.gillarStoraBilar());
+        System.out.println(p2.gillarStoraBilar());
+        System.out.println(p3.gillarStoraBilar());
+
+
+
     }
 
 
