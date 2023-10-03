@@ -1,6 +1,19 @@
 package Sprint1.Pepparkaksdemo;
 
 public class Chips extends Godsak{
+
+    private boolean salty = true;
+
+    public Chips(boolean salty){
+        this.salty=salty;
+    }
+
+    public Chips(){}
+
+    public boolean getSalty(){
+        return this.salty;
+    }
+
 /*
     public String whoAmI(){
         return "chips";
