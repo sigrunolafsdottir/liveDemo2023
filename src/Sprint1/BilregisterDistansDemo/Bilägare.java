@@ -2,6 +2,7 @@ package Sprint1.BilregisterDistansDemo;
 
 public class Bilägare extends Person {
 
+    private String whoAmI = "Person";
 
     public Bilägare(String name, String ssn, int age) {
         super(name, ssn, age);
@@ -12,11 +13,14 @@ public class Bilägare extends Person {
 
     @Override
     public void whoAmI(){
-        System.out.println("Bilägare");
+        System.out.println(whoAmI);
     }
 
-    @Override
+
+@Override
     public String gillarStoraBilar(){
         return "fr bilägare";
     }
+
+
 }

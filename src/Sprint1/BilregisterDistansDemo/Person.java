@@ -46,11 +46,11 @@ abstract public class Person implements TasteOfCars {
         System.out.println("Person");
     }
 
-    /*
+/*
     @Override
     public String gillarStoraBilar(){
         return "fr personfunktionen";
     }
 
-     */
+*/
 }

@@ -15,10 +15,10 @@ public class Lastbilschaufför extends Person {
         System.out.println("Lastbilschaufför");
     }
 
-    /*
+
     @Override
     public String gillarStoraBilar(){
         return "fr lastbilschauffören";
     }
-*/
+
 }
