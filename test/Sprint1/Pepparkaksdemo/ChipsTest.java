@@ -40,4 +40,21 @@ class ChipsTest {
         Assertions.assertEquals(expectedNotSaltySetInContstructor, actualNotSaltySetInContstructor);
 
     }
+
+    @Test
+    void setSaltyTest(){
+        boolean oldValue = true;
+        boolean newValue = false;
+        Chips testChips = new Chips(oldValue);
+
+        testChips.setSalty(newValue);
+
+        boolean expectedValue = newValue;
+        boolean expectedErrorValue = oldValue;
+        boolean actualValue = testChips.getSalty();
+
+        Assertions.assertEquals(expectedValue, actualValue);
+        Assertions.assertNotEquals(expectedErrorValue, actualValue);
+
+    }
 }

@@ -14,6 +14,10 @@ public class Chips extends Godsak{
         return this.salty;
     }
 
+    public void setSalty(boolean salty){
+        this.salty=salty;
+    }
+
 /*
     public String whoAmI(){
         return "chips";
