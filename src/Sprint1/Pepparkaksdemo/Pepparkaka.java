@@ -5,7 +5,17 @@ public class Pepparkaka extends Godsak {
     private String form = "gris";
     protected boolean gräddad;
 
+    protected boolean glaserad = false;
+
     public String demoString = "pepparkaka";
+
+    public void glasera(){
+        glaserad = true;
+    }
+
+    public boolean getGlaserad(){
+        return glaserad;
+    }
 
     public String whoAmI(){
         return "pepparkaka";
