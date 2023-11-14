@@ -1,8 +1,4 @@
-package Sprint4.TCPLiveSimpleDemo;
-
-// Klienten ska läsa in text från System.in (fr användaren)
-//Sen skickas texten till servern
-//servern skriver ut texten på System.out
+package Sprint4.TCPLiveSimpleDemo.LiveDemoBasicTCPpp.Bilregister.Server;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -13,24 +9,27 @@ import java.net.Socket;
 
 public class Server {
 
-    public static void main(String[] args) throws IOException {
-
+    public static void main(String[] args) {
         int port = 55555;
         String temp = "";
-        int i = 0;
+        BilDAO database = new BilDAO();
+        String answer = "";
 
         try(ServerSocket serv = new ServerSocket(port);
             Socket sock = serv.accept();
             PrintWriter pw = new PrintWriter(sock.getOutputStream(), true);
             BufferedReader br = new BufferedReader(new InputStreamReader(sock.getInputStream()))
         ){
-            //System.out.println("före loopen");
-            while((temp=br.readLine()) != null){
-                pw.println("Meddelandet är mottaget");
-                System.out.println(temp);
-                pw.println("Meddelandet har visats");
-            }
-        }
 
+            while((temp = br.readLine()) != null){   //ta emot från klienten
+                answer = database.searchCar(temp.trim());   // slå upp i databasen
+                pw.println(answer);    //skicka tillbaka svar
+            }
+
+
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
+
 }
