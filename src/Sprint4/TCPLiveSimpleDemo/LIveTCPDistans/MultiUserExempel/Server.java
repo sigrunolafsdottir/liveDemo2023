@@ -1,4 +1,4 @@
-package Sprint4.TCPLiveSimpleDemo.LIveTCPDistans;
+package Sprint4.TCPLiveSimpleDemo.LIveTCPDistans.MultiUserExempel;
 
 // Klienten ska läsa in text från System.in (fr användaren)
 //Sen skickas texten till servern
@@ -11,16 +11,19 @@ import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-public class Server {
+public class Server extends Thread {
 
-    public static void main(String[] args) throws IOException {
+    Socket sock;
 
-        int port = 55555;
+    public Server(Socket sock){
+        this.sock = sock;
+    }
+
+    public void run() {
+
         String temp = "";
-        int i = 0;
 
-        try(ServerSocket serv = new ServerSocket(port);
-            Socket sock = serv.accept();
+        try(
             PrintWriter pw = new PrintWriter(sock.getOutputStream(), true);
             BufferedReader br = new BufferedReader(new InputStreamReader(sock.getInputStream()))
         ){
@@ -30,6 +33,8 @@ public class Server {
                 System.out.println(temp);
                 pw.println("Meddelandet har visats");
             }
+        } catch (IOException e) {
+            e.printStackTrace();
         }
 
     }

@@ -23,7 +23,6 @@ public class Klient {
             while ((temp = userInput.readLine()) != null){
 
                 pw.println(temp);  //skickar regnr
-
                 temp = br.readLine();   //tar emot svar fr server
                 System.out.println(temp);   //skriver ut serverns svar
 

@@ -1,4 +1,4 @@
-package Sprint4.TCPLiveSimpleDemo.LIveTCPDistans;
+package Sprint4.TCPLiveSimpleDemo.LIveTCPDistans.InitialtExempel;
 
 
 import java.io.BufferedReader;
